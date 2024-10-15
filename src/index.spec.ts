@@ -343,6 +343,180 @@ describe('Calculator', (): void => {
 
   });
 
+  it('should display `-6` when pressMinus() pressThree() pressMinus() + pressThree()', (): void => {
 
+    calculator.pressMinus();
+    calculator.pressThree();
+    calculator.pressMinus();
+    calculator.pressThree();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-6');
+
+  });
+
+  it('should display `-6` when pressMinus() pressThree() pressMinus() + pressThree()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressThree();
+    calculator.pressPlus();
+    calculator.pressMinus()
+    calculator.pressThree();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-6');
+
+  });
+
+  it('should display `-6` when pressMinus() pressThree() pressMinus() + pressThree()', (): void => {
+
+    calculator.pressThree();
+    calculator.pressPlus();
+    calculator.pressMinus()
+    calculator.pressThree();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('0');
+
+  });
+
+  it('should display `-6` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressThree();
+    calculator.pressMult()
+    calculator.pressTwo();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-6');
+
+  });
+
+  it('should display `-3` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressTwo();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-3');
+
+  });
+
+  it('should display `3` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressTwo();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('3');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressOne();
+    calculator.pressDot();
+    calculator.pressFive()
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-4');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressSix();
+    calculator.pressMult()
+    calculator.pressOne();
+    calculator.pressDot();
+    calculator.pressFive()
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-9');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus();
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressSeven();
+    calculator.pressDot();
+    calculator.pressFive()
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-0.8');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressSix();
+    calculator.pressDiv();
+    calculator.pressSeven();
+    calculator.pressDot();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('0.8');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressOne();
+    calculator.pressDot();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('4');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressSix();
+    calculator.pressDiv();
+    calculator.pressFour();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('1.5');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+    
+    calculator.pressMinus();
+    calculator.pressSix();
+    calculator.pressDiv();
+    calculator.pressFour();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-1.5');
+
+  });
 
 });
