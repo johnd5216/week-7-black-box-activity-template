@@ -519,4 +519,90 @@ describe('Calculator', (): void => {
 
   });
 
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus()
+    calculator.pressSix();
+    calculator.pressDiv()
+    calculator.pressClear()
+    calculator.pressFour();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('45');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus()
+    calculator.pressSix();
+    calculator.pressZero();
+    calculator.pressZero();
+    calculator.pressDiv();
+    calculator.pressTwo();
+    calculator.pressSeven();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-22.22222222222222');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus()
+    calculator.pressSix();
+    calculator.pressDot()
+    calculator.pressZero();
+    calculator.pressFive();
+    calculator.pressMult();
+    calculator.pressTwo();
+    calculator.pressDot()
+    calculator.pressZero();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-12.402499999999998');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus()
+    calculator.pressSix();
+    calculator.pressDot()
+    calculator.pressZero();
+    calculator.pressFive();
+    calculator.pressDiv();
+    calculator.pressTwo();
+    calculator.pressDot()
+    calculator.pressZero();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-2.951219512195122');
+
+  });
+
+  it('should display `4` when pressMinus() pressThree() pressMult() + pressMinus() and pressTwo()', (): void => {
+
+    calculator.pressMinus()
+    calculator.pressSix();
+    calculator.pressPlus();
+    calculator.pressTwo();
+    calculator.pressEquals();
+    calculator.pressMult();
+    calculator.pressFive();
+    calculator.pressEquals();
+    const displayValue: string = calculator.display();
+
+    expect(displayValue).toEqual('-20');
+
+  });
+  
+
 });
